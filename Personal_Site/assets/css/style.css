@@ -37,6 +37,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 15px;
     border: 8px solid transparent;
 }
+.white-bg-smallpad {
+    background: rgba(255, 255, 255, .9);
+    border-radius: 15px;
+    border: 8px solid transparent;
+}
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl{
         max-width: 1400px;
@@ -111,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
     #header .logo {
-        font-size: 33px;
+        font-size: 3em;
     }
 }
 
@@ -349,8 +354,57 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -1;
     left: 0;
     top: 0;
-    height: 56vw;
+    min-height: 100vh;
+    min-width: 100vw;
     width: auto;
+}
+
+.type-spot {
+    font-family: 'Fira Mono', monospace;
+}
+
+#border {
+    border-bottom: solid 3px rgba(1, 235, 83, .8);
+    position: absolute;
+    right: -7px;
+    width: 1em;
+}
+
+#hero body {
+    padding: 40px;
+}
+
+#hero h2 {
+    border-right: solid 3px rgba(1, 235,83, .8);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Fira Mono', monospace;
+    font-size: 28px;
+    color: #01EB53;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Animation */
+#hero h2 {
+    animation: animated-text 4s steps(122, end) .7s 1 normal both, animated-cursor 650ms steps(122, end) infinite;
+}
+/* text animation */
+@keyframes animated-text {
+    0% {width: 0;}
+    13% {width: 23%;}
+    30% {width: 23%;}
+    40% {width: 53%;}
+    60% {width: 53%;}
+    70% {width: 86%;}
+    90% {width: 86%;}
+    100% {width: 100%;}
+
+}
+/* cursor animations */
+@keyframes animated-cursor {
+    from {border-right-color: rgba(0, 255, 0, .75);}
+    to {border-right-color: transparent;}
 }
 
 #hero:before {
@@ -378,7 +432,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 992px) {
     #hero .container {
-        padding-top: 0;
+        padding-top: 10;
     }
 }
 
@@ -393,9 +447,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-    color: #eee;
     margin: 15px 0 0 0;
-    font-size: 22px;
+    font-size: 2.2em;
+}
+#hero h3 {
+    padding-top: 10px;
 }
 
 #hero .btn-get-started {
@@ -428,13 +484,19 @@ h1, h2, h3, h4, h5, h6 {
     }
 
         #hero h1 {
-            font-size: 2.7em;
+            font-size: 6vw;
             line-height: 1em;
         }
 
         #hero h2 {
-            font-size: 18px;
+            font-size: .8em;
             line-height: 24px;
+        }
+
+        #hero h3 {
+            font-size: .75em;
+            line-height: 20px;
+            padding-top: 10px;
         }
 }
 
@@ -555,7 +617,7 @@ section {
 }
 
     .clients img {
-        max-width: 45%;
+        max-width: 55%;
         margin: 15px;
         transition: all 0.4s ease-in-out;
         display: inline-block;
@@ -967,7 +1029,7 @@ section {
     }
 
 /*--------------------------------------------------------------
-# Team
+# Classmates
 --------------------------------------------------------------*/
 .team .member {
     margin-bottom: 20px;
